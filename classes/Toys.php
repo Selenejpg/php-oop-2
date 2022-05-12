@@ -1,6 +1,12 @@
 <?php
 
+require __DIR__ . '/../traits/Sconto.php';
+
 class Toys extends Prodotto {
+    
+    //traits
+    use Sconto;
+
     //parametri specifici dei giochi
     public $dimensioni;
     public $colore;
@@ -38,7 +44,9 @@ class Toys extends Prodotto {
         if (strlen($_nomeProdotto) > 3) {
             $this -> colore = "blu";
         }else {
-            $this -> colore = "rosso";
+            //$this -> colore = "rosso";
+            throw new Exception('Il nome del prodotto è minore di 3 caratteri');
+            //in caso la prola abbia meno di 3 caratteri, l'exeption inserita viene stampata nella tabella degli errori di php. Utile lato utente per capire dove si trova il problema
         }
     }
 
