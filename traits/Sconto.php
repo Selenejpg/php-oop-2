@@ -7,7 +7,7 @@ trait Sconto {
     
     public function getSconto($coloreProdotto){
         if ($coloreProdotto == "rosso") {
-            $this -> sconto = 10;
+            $this -> sconto = 20;
         }
 
         return $this -> sconto;
