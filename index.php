@@ -33,7 +33,7 @@ var_dump($palla);
 //trovi errori e li salvi sempre in tabella errori php. Richiami funzione da ontrollare e controlli se ci sono errori in quella funzione restituendoti un errore quando le condizioni non sono verificate
 
 try {
-    setChangeColor($palla -> name);
+    $palla -> setChangeColor($palla -> name);
 } catch (Exception $e) {
     echo 'Eccezione: ' . $e->getMessage();
 }
